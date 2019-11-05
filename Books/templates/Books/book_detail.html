@@ -1,0 +1,43 @@
+{%include 'base.html'%} {%block body%}
+<table class="table">
+	<tr>
+		<td>id</td>
+		<td>{{book.id}}</td>
+	<tr>
+		<td>title</td>
+		<td>{{book.title}}</td>
+	</tr>
+	<tr>
+		<td>description</td>
+		<td>{{book.description}}</td>
+	</tr>
+	<tr>
+		<td>Updated</td>
+		<td>{{book.Updated}}</td>
+	</tr>
+	<tr>
+		<td>Timestamp</td>
+		<td>{{book.Timestamp}}</td>
+	</tr>
+	<tr>
+		<td>Last_edited_by</td>
+		<td>{{book.Last_edited_by}}</td>
+	</tr>
+	<tr>
+		<td>Added_by</td>
+		<td>{{book.Added_by}}</td>
+	</tr>
+	
+
+</table>
+
+<a class="cursor:Hand btn btn-primary" href="{{book.getBooksUrl}}">VIEW ALL BOOKS</a></td>
+<a class="cursor:Hand btn btn-link" href="{{book.updateBookUrl}}">EDIT BOOK</a></td>
+<a class="cursor:Hand btn btn-danger" href="{{book.deleteBookUrl}}">DELETE BOOK</a></td>
+
+{%endblock%}
+
+
+
+
+

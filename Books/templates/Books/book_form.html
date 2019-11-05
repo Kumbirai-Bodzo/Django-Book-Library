@@ -1,0 +1,31 @@
+
+
+{%include 'base.html'%} {%block body%}
+
+<h1><span class = "label label-warning">ADD New Book</span></h1>
+
+
+<form method="POST" action="" class = "form-inline" role = "form">
+{%csrf_token%}
+
+   
+<br/>
+<label>TITLE:</label>
+{{form.title}}
+
+<br>
+<label>Description:</label>
+{{form.description}}
+<br>
+{%if view_type in 'update' %}
+<input type="submit" class="cursor:Hand btn btn-primary btn-lg" value="UPDATE" name="Confirm"/>
+
+{%else%}
+<input type="submit" class="cursor:Hand btn btn-primary btn-lg" value="ADD" name="Confirm"/>
+{%endif%}
+
+
+</form>
+
+
+{%endblock%}

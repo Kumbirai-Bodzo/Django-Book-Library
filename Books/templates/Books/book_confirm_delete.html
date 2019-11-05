@@ -1,0 +1,15 @@
+
+{%include 'base.html'%} {%block body%}
+
+<h1><span class = "label label-warning">Are you sure you want to delete</span></h1>
+
+
+<form method="POST" action="">
+{%csrf_token%}
+<br/>
+<input type="submit" class="cursor:Hand btn btn-danger btn-lg" value="CONFIRM" name="Confirm"/>
+<a class="cursor:Hand btn btn-primary btn-lg" href="{{book.getBookUrl}}">CANCEL</a>
+</form>
+
+
+{%endblock%}

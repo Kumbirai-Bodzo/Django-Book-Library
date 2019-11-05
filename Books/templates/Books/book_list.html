@@ -1,0 +1,40 @@
+{%include 'base.html'%} {%block body%}
+<a class="cursor:Hand btn btn-primary btn-lg" href="{% url 'book_create' %}">ADD BOOK</a>
+
+<table class="table">
+	<tr>
+		<th>id</th>
+		<th>title</th>
+		<th>description</th>
+		<th>Updated</th>
+		<th>Timestamp</th>
+		<th>Last edited by</th>
+		<th>Added by</th>
+			<th>URL</th>
+	</tr>
+
+	{%for book in object_list%}
+	<tr >
+		<td>{{book.id}}</td>
+		<td>{{book.title}}</td>
+		<td>{{book.description}}</td>
+		<td>{{book.Updated}}</td>
+		<td>{{book.Timestamp}}</td>
+		<td>{{book.Last_edited_by}}</td>
+		<td>{{book.Added_by}}</td>
+		
+		<td><a class="cursor:Hand btn btn-primary" href="{{book.getBookUrl}}">VIEW BOOK DETAILS</a><td>
+		
+	</tr>
+	
+{%empty%}
+<h2>no books exist</h2>
+
+
+{%endfor%} {%endblock%}
+</table>
+
+
+
+
+
